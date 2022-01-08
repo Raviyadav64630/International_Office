@@ -1,0 +1,89 @@
+
+<div id="d1">
+  <h2>{{'cLoginText'|translate}}</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.username.errors }">
+      <input type="username" [(ngModel)]="username" placeholder="Username" formControlName="username">
+    </p>
+    <div *ngIf="isSubmitted && formControls.email.errors">
+    <div *ngIf="formControls.email.errors.required">Username is required</div>
+    </div>
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+      <input type="email" [(ngModel)]="email" placeholder="E-Mail" formControlName="email">
+    </p>
+    <div *ngIf="isSubmitted && formControls.email.errors">
+    <div *ngIf="formControls.email.errors.required">E-Mail is required</div>
+    </div>
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+      <input type="password" [(ngModel)]="password" placeholder="Password" formControlName="password">
+    </p> 
+    <div *ngIf="isSubmitted && formControls.password.errors">
+    <div *ngIf="formControls.password.errors.required">Password is required</div>
+    </div>
+    <p>
+      <button mat-button type="submit" color="warn">LOGIN</button>
+      <!-- <input type="submit" value="Log in">-->
+    </p>
+    <p>Not registered yet? <button mat-flat-button (click)="openDialog()">Register</button></p>
+  </form>
+</div>
+
+
+
+<!--
+
+  <mat-card>
+  <mat-card-content>
+    <form [formGroup]="form" (submit)="submit()" *ngIf="!authenticated">      
+      <h1>{{'cLoginText'|translate}}</h1>
+      <mat-form-field class="full-width-input">
+        <input matInput placeholder="Email" formControlName="username" required>
+        <mat-error>
+          Please provide a valid email address
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="password" placeholder="Password" formControlName="password" required>
+        <mat-error>
+          Please provide a valid password
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button type="submit" color="primary">Login</button>
+    </form>
+    <div class='btn-container' *ngIf="authenticated">
+      <button mat-raised-button class="btn logout" color="primary" (click)="logout()">Logout</button>
+      <button mat-raised-button class="btn profile" color="primary" (click)="profile()">Profile</button>
+    </div>
+  </mat-card-content>
+  <mat-card-content>
+    <form [formGroup]="form" (submit)="register()" *ngIf="!registered && !authenticated">      
+      <h1>{{'cRegisterUserText'|translate}}</h1>
+      <mat-form-field class="full-width-input">
+        <input matInput placeholder="Name" formControlName="name" required>
+        <mat-error>
+          Please provide a valid name
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput placeholder="Email" formControlName="username" required>
+        <mat-error>
+          Please provide a valid email address
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="password" placeholder="Password" formControlName="password" required>
+        <mat-error>
+          Please provide a valid password
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button type="submit" color="primary">Register</button>
+    </form>
+  </mat-card-content>
+  <mat-card-content *ngIf="registered">
+    <h3>{{message}}</h3> 
+  </mat-card-content>
+  <mat-card-content *ngIf="authenticated">
+    <h3>{{'cWelcomeText' | translate}} : {{username}}</h3> 
+  </mat-card-content>
+</mat-card>
+-->

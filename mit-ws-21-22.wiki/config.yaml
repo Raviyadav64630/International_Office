@@ -1,0 +1,74 @@
+---
+# Configuration sample file for Jingo (YAML)
+application:
+  title: Jingo
+  logo: ''
+  favicon: ''
+  repository: 'C:\Users\ugarmann\Documents\angular-projekte\mit-ws-20-21\mit-ws-20-21.wiki'
+  docSubdir: ''
+  remote: ''
+  pushInterval: 30
+  secret: change me
+  git: git
+  skipGitCheck: false
+  loggingMode: 1
+  pedanticMarkdown: true
+  gfmBreaks: true
+  staticWhitelist: '/\.png$/i, /\.jpg$/i, /\.gif$/i'
+  proxyPath: ''
+  allowHtml: false
+authentication:
+  google:
+    enabled: false
+    clientId: replace me with the real value
+    clientSecret: replace me with the real value
+    redirectURL: ''
+  github:
+    enabled: false
+    clientId: replace me with the real value
+    clientSecret: replace me with the real value
+    redirectURL: ''
+  ldap:
+    enabled: false
+    url: 'ldap://example.org:389'
+    bindDn: ''
+    bindCredentials: ''
+    searchBase: 'ou=people,dc=example,dc=org'
+    searchFilter: '(uid={{username}})'
+    searchAttributes: ''
+  local:
+    enabled: true
+    accounts:
+      - username: 'udo'
+        passwordHash: 'cceebf4930900a141398b2621d92514390352861'
+        email: ''
+features:
+  markitup: false
+  codemirror: true
+  gravatar: true
+server:
+  hostname: localhost
+  port: 6067
+  localOnly: false
+  baseUrl: ''
+  CORS:
+    enabled: false
+    allowedOrigin: '*'
+authorization:
+  anonRead: true
+  validMatches: .+
+  emptyEmailMatches: false
+pages:
+  index: Home
+  title:
+    fromFilename: true
+    fromContent: false
+    asciiOnly: false
+    lowercase: false
+  itemsPerPage: 10
+customizations:
+  sidebar: _sidebar.md
+  footer: _footer.md
+  style: _style.css
+  script: _script.js
+
