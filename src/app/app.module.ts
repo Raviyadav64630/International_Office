@@ -16,6 +16,7 @@ import { CoursesCardListComponent } from './courses-card-list/courses-card-list.
 import { ChatComponent } from './chat/chat.component';
 import { AgmCoreModule } from '@agm/core';
 import { DialogContentExampleDialog } from './login/login.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DialogContentExampleDialog } from './login/login.component';
     SelectLanguageComponent,
     CoursesCardListComponent,
     ChatComponent,
-    DialogContentExampleDialog
+    DialogContentExampleDialog,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

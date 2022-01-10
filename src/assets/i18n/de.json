@@ -7,5 +7,6 @@
    "cLoginText" : "Anmelden",
    "cWelcomeText" : "Willkommen",
    "cCourseListText" : "Wählen einen Kurs",
-   "cMapTitleText" : "Kurs Geolocator"
+   "cMapTitleText" : "Kurs Geolocator",
+   "cChatroomText" : "Chatraum"
 }
