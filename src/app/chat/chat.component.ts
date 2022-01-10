@@ -17,10 +17,13 @@ export class ChatComponent implements OnInit{
   }
 
   ngOnInit(){
+    this.messageList = [];
     this.chatService.getActiveUsers().subscribe((users: string) => {
+      console.log(users);
       this.messageList.push(users);
     });
     this.chatService.getNewMessage().subscribe((message: string) => {
+      console.log(message);
       this.messageList.push(message);
     })
   }
@@ -42,6 +45,8 @@ export class ChatComponent implements OnInit{
 
   ngOnDestroy() {
     this.showMessage=false;
+    this.messageList = [];
+    this.chatService.destroyEmit();
   }
 
 }

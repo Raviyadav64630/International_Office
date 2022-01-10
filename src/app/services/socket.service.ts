@@ -14,6 +14,10 @@ export class SocketService {
 
   socket = io('http://localhost:3000');
 
+  connectSocket(){
+    this.socket.removeAllListeners(); 
+  }
+
   public sendMessage(message: any) {
     this.socket.emit('message', message);
   }
@@ -40,6 +44,9 @@ export class SocketService {
     });
     
     return this.users$.asObservable();
+  }
+  destroyEmit(){
+    this.socket.removeAllListeners(); 
   }
 
 }

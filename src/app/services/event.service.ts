@@ -8,6 +8,6 @@ export class EventService {
   constructor(private http: HttpClient,) { }
 
   getEvent(){
-    return this.http.get("http://localhost:3000/news/getEvent");
+    return this.http.get("http://localhost:3000/event/getEvent");
   }
 }
