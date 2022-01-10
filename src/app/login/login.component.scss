@@ -1,0 +1,20 @@
+mat-card {
+  max-width: 400px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+mat-form-field {
+  display: block;
+}
+
+.btn-container {
+  size: 0.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bth-container .btn {
+  flex: 1
+}

@@ -1,0 +1,25 @@
+ <mat-card>
+    <mat-card-header>
+        <mat-card-title>Chat Window</mat-card-title>
+        <mat-card-subtitle>THD admin chat</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content >
+        <input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="example-button-row">
+
+        <button mat-raised-button color="primary" (click)="joinChat()">Join Chat</button>
+        <div *ngIf="showMessage">
+        <button mat-raised-button color="primary" (click)="sendMessage()">Send Message</button>
+        </div>
+        </div>
+      </mat-card-actions>
+      <mat-card-content>
+        <div *ngFor="let message of messageList">
+            <li>
+                {{message}}
+            </li>  
+        </div>
+      </mat-card-content>
+    </mat-card>

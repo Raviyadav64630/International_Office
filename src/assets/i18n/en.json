@@ -1,0 +1,11 @@
+{
+    "cHomeText" : "Home",
+    "cNewsText" : "News",
+    "cNavText" : "Navigation",
+    "cEventText" : "Events",
+    "cCourseText" : "Courses",
+    "cLoginText" : "Login",
+    "cWelcomeText" : "Welcome",
+    "cCourseListText" : "Select Course",
+    "cMapTitleText" : "Course Geolocator"
+ }
