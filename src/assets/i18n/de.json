@@ -1,0 +1,12 @@
+{
+   "cHomeText" : "Startseite",
+   "cNewsText" : "Neuigkeiten",
+   "cNavText" : "Richtungen",
+   "cEventText" : "Veranstaltungen",
+   "cCourseText" : "Kurse",
+   "cLoginText" : "Anmelden",
+   "cWelcomeText" : "Willkommen",
+   "cCourseListText" : "Wählen einen Kurs",
+   "cMapTitleText" : "Kurs Geolocator",
+   "cChatroomText" : "Chatraum"
+}

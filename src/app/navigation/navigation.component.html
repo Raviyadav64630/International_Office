@@ -1,0 +1,33 @@
+<h1>{{'cMapTitleText' | translate}}</h1>
+  <div layout="row">
+      
+   <!-- <agm-map [latitude]="lat" [longitude]="lon">
+      <agm-marker [latitude]="lat" [longitude]="lon"></agm-marker>
+    </agm-map>
+    -->
+
+    <h2>Courses</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>{{'cCourseListText' | translate}}</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let course of courses"
+        [class.selected]="course === selectedcourse"
+        (click)="onSelect(course)">
+        <span class="badge"></span> {{course.description}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div *ngIf="selectedcourse">
+
+      <mat-form-field appearance="fill">
+      <mat-label>{{selectedcourse.description}}<span>id: </span>{{selectedcourse.id}}</mat-label>
+      <select matNativeControl required>
+        <label for="course-name">course: </label>
+        <input id="course-name" [(ngModel)]="selectedcourse.description" placeholder="description">
+      </select>
+      </mat-form-field>
+
+    </div>
+
+  </div>

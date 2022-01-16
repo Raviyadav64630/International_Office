@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form" (submit)="submit()" *ngIf="!authenticated">      
+      <h1>{{'cLoginText'|translate}}</h1>
+      <mat-form-field class="full-width-input">
+        <input matInput placeholder="Email" formControlName="username" required>
+        <mat-error>
+          Please provide a valid email address
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="password" placeholder="Password" formControlName="password" required>
+        <mat-error>
+          Please provide a valid password
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button type="submit" color="primary">Login</button>
+      <button mat-button (click)="openDialog()">REGISTER</button>
+    </form>
+    <div class='btn-container' *ngIf="authenticated">
+      <button mat-raised-button class="btn logout" color="primary" (click)="logout()">Logout</button>
+      
+    </div>
+  </mat-card-content>
+  <mat-card-content *ngIf="authenticated">
+    <h3>{{'cWelcomeText' | translate}} : {{username}}</h3> 
+  </mat-card-content>
+</mat-card>
